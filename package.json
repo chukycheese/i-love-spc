@@ -1,0 +1,13 @@
+{
+  "name": "i-love-spc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "i love spc — SPC 사건사고, 사법 기록, 계열사 및 팟캐스트 아카이브",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.156.1"
+  }
+}

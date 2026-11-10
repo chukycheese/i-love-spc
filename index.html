@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>i ❤️ spc — 달콤한 빵 뒤에 숨겨진 차가운 기록들</title>
+<meta name="description" content="SPC그룹의 재판 기록, 중대재해·사건사고 타임라인, 계열사와 브랜드 지배구조를 공개 자료로 정리한 비공식 팩트체크 아카이브.">
+<meta name="theme-color" content="#009fe3">
+<meta property="og:title" content="i ❤️ spc — 달콤한 빵 뒤에 숨겨진 차가운 기록들">
+<meta property="og:description" content="SPC그룹 재판 · 사건사고 · 계열사 팩트체크 아카이브">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <span class="topbar__dot" aria-hidden="true"></span>
+    <span>비공식 기록 아카이브 · SPC그룹과 무관</span>
+    <span class="topbar__sep" aria-hidden="true">/</span>
+    <span id="as-of-label">2026. 11. 9 기준</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="sprinkle s1"></span><span class="sprinkle s2"></span><span class="sprinkle s3"></span>
+    <span class="sprinkle s4"></span><span class="sprinkle s5"></span><span class="sprinkle s6"></span>
+  </div>
+
+  <div class="wrap hero__inner">
+    <p class="hero__badge">
+      <span aria-hidden="true">🍰</span> HAPPY ARCHIVE <span aria-hidden="true">·</span> 상미당홀딩스 편
+    </p>
+    <h1 class="logo" aria-label="I love SPC">
+      <span class="logo__i">i</span>
+      <span class="logo__heart" aria-hidden="true">❤</span>
+      <span class="logo__spc">spc</span>
+    </h1>
+    <p class="tagline">달콤한 빵 뒤에 숨겨진 차가운 기록들</p>
+    <p class="subtitle">SPC그룹 재판 · 사건사고 · 계열사 팩트체크 아카이브</p>
+    <p class="hero__note">케이크는 달고, 기록은 쓰게. 공개된 보도와 법원 기록으로 정리했습니다.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#brands" data-goto="brands">내가 먹는 빵이 SPC인지 확인</a>
+      <a class="btn btn--ghost" href="#trials" data-goto="trials">재판 기록부 열기</a>
+    </div>
+    <p class="hero__aside">❤️는 브랜드가 아니라 아이러니입니다.</p>
+
+    <aside class="hero__receipt" aria-hidden="true">
+      <div class="receipt">
+        <p class="receipt__brand">SPC GROUP · HAPPY ARCHIVE</p>
+        <p class="receipt__title">i ❤ spc</p>
+        <p class="receipt__sub">기록 영수증 · 2026. 11. 9.</p>
+        <div class="receipt__rows">
+          <p class="receipt__row"><span>소비자 브랜드</span><b>30</b></p>
+          <p class="receipt__row"><span>핵심 계열사</span><b>10</b></p>
+          <p class="receipt__row"><span>오너 일가 지분</span><b>100%</b></p>
+          <p class="receipt__row"><span>1심 공판</span><b>113회</b></p>
+          <p class="receipt__row receipt__row--accent"><span>적립 포인트</span><b>0 P</b></p>
+        </div>
+        <p class="receipt__barcode"></p>
+        <p class="receipt__foot">본 영수증은 기록용입니다</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <div class="stats" id="stats" aria-label="핵심 통계"></div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="ticker"></div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" aria-label="아카이브 메뉴">
+  <div class="wrap tabs__inner" role="tablist" aria-label="아카이브 탭">
+    <button class="tab" role="tab" id="tab-brands" aria-controls="panel-brands" aria-selected="true" data-tab="brands">
+      <span class="tab__icon" aria-hidden="true">🏢</span><span>계열사 &amp; 브랜드 맵</span>
+    </button>
+    <button class="tab" role="tab" id="tab-trials" aria-controls="panel-trials" aria-selected="false" tabindex="-1" data-tab="trials">
+      <span class="tab__icon" aria-hidden="true">⚖️</span><span>재판 기록부</span>
+    </button>
+    <button class="tab" role="tab" id="tab-incidents" aria-controls="panel-incidents" aria-selected="false" tabindex="-1" data-tab="incidents">
+      <span class="tab__icon" aria-hidden="true">🚨</span><span>중대재해 타임라인</span>
+    </button>
+    <button class="tab" role="tab" id="tab-podcasts" aria-controls="panel-podcasts" aria-selected="false" tabindex="-1" data-tab="podcasts">
+      <span class="tab__icon" aria-hidden="true">🎙️</span><span>팟캐스트 아카이브</span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+  <!-- 01 브랜드 -->
+  <section class="panel" id="panel-brands" role="tabpanel" aria-labelledby="tab-brands" tabindex="0">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">01 · BRAND MAP</p>
+        <h2>내가 먹는 이것도 SPC?</h2>
+        <p class="lede">편의점 빵부터 데이트 코스 버거까지. 매장 간판은 달라도 지주회사는 하나입니다. 브랜드 30개를 초성으로도 찾아보세요.</p>
+      </header>
+
+      <div class="searchbox">
+        <span class="searchbox__icon" aria-hidden="true">🔍</span>
+        <label class="sr-only" for="brand-search">브랜드 검색</label>
+        <input id="brand-search" type="search" inputmode="search" autocomplete="off" spellcheck="false"
+               placeholder="브랜드명 · 영문명 · 상품 · 계열사 (초성: ㅍㄹㅂㄱㄸ)">
+        <button type="button" class="searchbox__clear" id="search-clear" aria-label="검색어 지우기" hidden>✕</button>
+      </div>
+
+      <div class="chips" id="brand-chips" role="group" aria-label="카테고리 필터"></div>
+      <p class="result-count" id="brand-count" role="status" aria-live="polite"></p>
+
+      <div class="brand-grid" id="brand-grid"></div>
+
+      <div class="empty" id="brand-empty" hidden>
+        <p class="empty__emoji" aria-hidden="true">🌱</p>
+        <p class="empty__title">검색 결과가 없습니다.</p>
+        <p class="empty__body">이 브랜드는 아직 SPC가 아닐지도요. 철자를 바꾸거나 초성으로 다시 시도해 보세요.</p>
+        <button type="button" class="btn btn--small btn--ghost" id="empty-reset">전체 브랜드 보기</button>
+      </div>
+
+      <aside class="note-strip" id="brand-notes" aria-label="브랜드 표기 안내"></aside>
+
+      <section class="gov" id="gov" aria-labelledby="gov-title"></section>
+    </div>
+  </section>
+
+  <!-- 02 재판 -->
+  <section class="panel" id="panel-trials" role="tabpanel" aria-labelledby="tab-trials" tabindex="0" hidden>
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">02 · COURT RECORDS</p>
+        <h2>법정에서 확인된 것들</h2>
+        <p class="lede">허영인 회장과 경영진의 사법 리스크 3건. 공소사실, 법정 공방, 그리고 확정된 판단까지. 아직 끝나지 않은 재판은 진행 상황을 함께 적었습니다.</p>
+      </header>
+
+      <div class="section-tools">
+        <p class="section-tools__count" id="trial-count"></p>
+        <button type="button" class="btn btn--small btn--ghost" id="trial-toggle-all" aria-pressed="false">모두 펼치기</button>
+      </div>
+
+      <div class="trials" id="trials-list"></div>
+
+      <p class="legal-note">
+        공소사실은 확정판결 전까지 무죄로 추정됩니다. 이 페이지의 서술은 각 항목에 표기한 보도와 법원 판결을 요약한 것이며, 판결문 원문과 다를 수 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 03 사고 -->
+  <section class="panel" id="panel-incidents" role="tabpanel" aria-labelledby="tab-incidents" tabindex="0" hidden>
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">03 · INCIDENT LOG</p>
+        <h2>1,000억을 약속한 뒤에 일어난 일들</h2>
+        <p class="lede">2017년 불법파견 적발부터 2026년 손가락 절단 사고까지. 날짜, 기계, 사람, 그리고 법원의 판단을 시간순으로 정리했습니다.</p>
+      </header>
+
+      <div class="chips" id="year-chips" role="group" aria-label="연도 필터"></div>
+      <p class="result-count" id="incident-count" role="status" aria-live="polite"></p>
+
+      <div class="timeline" id="incident-list"></div>
+
+      <section class="pledge" id="pledge" aria-labelledby="pledge-title"></section>
+      <section class="cold-stats" id="cold-stats" aria-label="산재 통계"></section>
+    </div>
+  </section>
+
+  <!-- 04 팟캐스트 -->
+  <section class="panel" id="panel-podcasts" role="tabpanel" aria-labelledby="tab-podcasts" tabindex="0" hidden>
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">04 · PODCAST ARCHIVE</p>
+        <h2>좋게된 제빵사, 8년의 목소리</h2>
+        <p class="lede">XSFM &lt;그것은 알기 싫다&gt;에 출연한 임종린 지회장의 기록 12편. 사건의 배경과 현장의 목소리를 원문으로 들을 수 있습니다.</p>
+      </header>
+
+      <div class="pod-hero" id="pod-hero"></div>
+      <div class="pod-list" id="pod-list"></div>
+
+      <p class="pod-note">Apple Podcasts 링크는 새 창에서 열립니다. 에피소드 설명은 제목과 공개된 사건 기록을 바탕으로 정리한 것이며, 방송 원문 전체의 요약이 아닙니다.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <p class="footer__logo" aria-hidden="true">i ❤ spc</p>
+      <p class="footer__tag">달콤한 빵 뒤에 숨겨진 차가운 기록들</p>
+    </div>
+    <p class="footer__disclaimer" id="footer-disclaimer"></p>
+    <div class="footer__meta">
+      <span>데이터 원본 <code>data/spc-data.json</code></span>
+      <span>업데이트 <span id="footer-asof"></span></span>
+      <span>비공식 · 비영리 기록 정리</span>
+    </div>
+    <p class="footer__tiny">사망·부상 사고의 피해자와 유가족을 향한 조롱이 아닙니다. 같은 기록이 반복되지 않기를 바라는 마음으로 정리했습니다.</p>
+  </div>
+</footer>
+
+<button type="button" class="to-top" id="to-top" aria-label="맨 위로" hidden>↑</button>
+
+<noscript>
+  <div class="wrap" style="padding:24px 0">
+    <p>이 아카이브는 JavaScript로 데이터를 불러옵니다. 브라우저에서 JavaScript를 켜 주세요. 원본 데이터는 <code>data/spc-data.json</code>에 있습니다.</p>
+  </div>
+</noscript>
+
+<script src="data/spc-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
