@@ -20,11 +20,14 @@ npm run dev
 `main` 브랜치에 푸시하면 GitHub Actions가 Cloudflare Workers로 자동 배포합니다.
 
 ### 최초 1회 설정 (자동 배포 켜기)
-Pickle의 GitHub 연동에는 `workflows` 권한이 없어 워크플로 파일만은 직접 추가해야 합니다.
+워크플로는 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)에 포함되어 있습니다.
+남은 것은 저장소 Secrets 등록뿐입니다.
 
 1. **Secrets 등록** — Settings → Secrets and variables → Actions → New repository secret
    - `CLOUDFLARE_API_TOKEN` (Workers Scripts: Edit 권한 토큰)
    - `CLOUDFLARE_ACCOUNT_ID`
-2. **워크플로 파일 추가** — 저장소 루트의 [`deploy-workflow.yml`](deploy-workflow.yml) 내용을 복사해
-   `.github/workflows/deploy.yml` 로 새 파일 생성 후 커밋
-3. 커밋이 푸시되면 자동으로 `https://i-love-spc.inkstone.workers.dev/` 에 배포됩니다.
+2. 이후 `main` 브랜치에 푸시하면 데이터·인라인 빌드를 거쳐 자동으로
+   `https://i-love-spc.inkstone.workers.dev/` 에 배포됩니다.
+   (시크릿이 없으면 배포 단계만 건너뜁니다.)
+
+로컬에서 배포 결과물을 만들려면 `npm run build`를 실행하세요.

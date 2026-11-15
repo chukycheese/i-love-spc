@@ -21,7 +21,7 @@ def main() -> int:
         page.goto(URL, wait_until="load")
         page.wait_for_function("document.documentElement.classList.contains('is-ready')")
 
-        if page.inner_text("#as-of-label") != "2026. 11. 9 기준":
+        if page.inner_text("#as-of-label") != "2026. 11. 12 기준":
             problems.append("as-of label duplicated or wrong: " + page.inner_text("#as-of-label"))
 
         # 검색

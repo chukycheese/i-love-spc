@@ -33,6 +33,12 @@ jobs:
             echo "ready=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Build
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          python3 tools/build_data.py
+          python3 tools/build_standalone.py
+
       - name: Deploy
         if: steps.check.outputs.ready == 'true'
         uses: cloudflare/wrangler-action@v4
