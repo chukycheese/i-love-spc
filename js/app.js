@@ -461,10 +461,48 @@
     }).join('');
 
     if (countEl) {
+      var fatalCount = DATA.incidents.filter(function (i) { return i.fatal; }).length;
+      var overwork = DATA.incidentExtras.overwork;
       countEl.textContent = state.year === 'all'
-        ? '전체 ' + DATA.incidents.length + '건 — 사망 ' + DATA.incidents.filter(function (i) { return i.fatal; }).length + '건'
+        ? '전체 ' + DATA.incidents.length + '건 — 사고사 ' + fatalCount + '건 · 과로사 ' + (overwork ? overwork.items.length : 0) + '명'
         : state.year + '년 ' + list.length + '건';
     }
+
+    renderOverwork();
+  }
+
+  function renderOverwork() {
+    var host = $('#overwork');
+    if (!host) return;
+    var o = DATA.incidentExtras.overwork;
+    if (!o) { host.hidden = true; return; }
+
+    var items = o.items.filter(function (item) {
+      return state.year === 'all' || String(item.year) === String(state.year);
+    });
+    host.hidden = !items.length;
+    if (!items.length) return;
+
+    var filtered = state.year !== 'all';
+    host.innerHTML =
+      '<header class="overwork__head">' +
+      '<p class="overwork__eyebrow">' + esc(o.eyebrow) + '</p>' +
+      '<h2 id="overwork-title">' + esc(o.title) + '</h2>' +
+      '<p class="overwork__body">' + esc(o.body) + '</p>' +
+      '<p class="overwork__total"><strong>' + (filtered ? items.length : o.total) + '</strong>명 ' +
+      '<span>' + (filtered ? esc(state.year) + '년 과로사 산재 사망' : '2022~2025 산재 사망 · 사고사 3 + 과로사 3') + '</span></p>' +
+      '</header>' +
+      '<div class="overwork__grid">' + items.map(function (item) {
+        return '<article class="overwork__item">' +
+          '<div class="overwork__top"><span class="overwork__year">' + esc(item.year) + '</span>' +
+          '<span class="overwork__company">' + esc(item.company) + '</span></div>' +
+          '<h3>' + esc(item.cause) + '</h3>' +
+          '<p>' + esc(item.detail) + '</p>' +
+          '<p class="overwork__approval">' + esc(item.approval) + '</p>' +
+          '</article>';
+      }).join('') + '</div>' +
+      '<p class="overwork__note">' + esc(filtered ? '연도 필터는 과로사 사망 연도를 기준으로 표시합니다.' : o.note) + '</p>' +
+      sourcesHtml([o.source]);
   }
 
   function renderPledge() {

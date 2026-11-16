@@ -48,6 +48,10 @@ def main() -> int:
         # 탭 + 아코디언
         page.click('[data-tab="incidents"]')
         page.wait_for_timeout(200)
+        if page.eval_on_selector_all("#overwork .overwork__item", "e => e.length") != 3:
+            problems.append("overwork block should list 3 deaths")
+        if "과로사 3" not in page.inner_text("#incident-count"):
+            problems.append("incident count does not mention overwork deaths")
         page.click("#incident-spl-2022 .incident__more")
         page.wait_for_timeout(200)
         if page.is_hidden("#incident-body-spl-2022"):

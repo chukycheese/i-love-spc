@@ -1450,6 +1450,89 @@ a { color: inherit; }
 .incident__judgement strong { display: block; margin-bottom: 3px; font-size: 11px; color: var(--ink); }
 .incident__judgement ul { margin: 0; padding-left: 16px; }
 
+/* ---------- overwork deaths ---------- */
+.overwork {
+  margin-top: 18px;
+  padding: clamp(18px, 3vw, 26px);
+  border: 1px solid #f0dcc4;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(420px 180px at 100% 0%, rgba(180, 83, 9, .10), transparent 65%),
+    linear-gradient(180deg, #fffdf8, #fff8ef);
+}
+.overwork[hidden] { display: none; }
+.overwork__head { max-width: 68ch; }
+.overwork__eyebrow {
+  margin: 0 0 7px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  color: var(--amber);
+}
+.overwork h2 {
+  margin: 0;
+  font-size: clamp(20px, 2.8vw, 28px);
+  line-height: 1.3;
+  letter-spacing: -.035em;
+  color: var(--ink);
+}
+.overwork__body {
+  margin: 10px 0 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.overwork__total {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin: 14px 0 0;
+  font-family: var(--mono);
+}
+.overwork__total strong { font-size: 34px; line-height: 1; color: var(--amber); }
+.overwork__total span { font-size: 11px; color: var(--muted); }
+.overwork__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+.overwork__item {
+  padding: 14px;
+  border: 1px solid #f0e0cc;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.overwork__top { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.overwork__year {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--amber-bg);
+  color: var(--amber);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+}
+.overwork__company { font-size: 10.5px; font-weight: 700; color: var(--muted); }
+.overwork__item h3 { margin: 8px 0 4px; font-size: 15px; letter-spacing: -.02em; color: var(--ink); }
+.overwork__item p { margin: 0; font-size: 11.5px; line-height: 1.65; color: var(--ink-2); }
+.overwork__approval {
+  margin-top: 9px !important;
+  font-family: var(--mono);
+  font-size: 9.5px !important;
+  color: var(--amber) !important;
+}
+.overwork__note {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #efe3d2;
+  font-size: 10.5px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.overwork .sources { margin-top: 10px; }
+
 /* ---------- pledge / cold stats ---------- */
 .pledge {
   position: relative;
@@ -1871,6 +1954,7 @@ a { color: inherit; }
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .trial__cols { grid-template-columns: 1fr; gap: 16px; }
   .cold-stats { grid-template-columns: 1fr; }
+  .overwork__grid { grid-template-columns: 1fr; }
   .pledge__split { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .pod-hero { grid-template-columns: 1fr; }
   .pod-hero__mark { display: none; }
@@ -1938,6 +2022,9 @@ a { color: inherit; }
   .incident::before { left: -15px; top: 22px; }
   .incident__card { padding: 15px 14px; border-radius: 16px; }
   .incident__summary { font-size: 12.5px; }
+  .overwork { padding: 16px 14px; }
+  .overwork__total strong { font-size: 28px; }
+  .overwork__item { padding: 12px; }
   .pledge { padding: 20px 16px; border-radius: 22px; }
   .pledge__split { grid-template-columns: 1fr; gap: 6px; }
   .pledge__split div { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 9px 12px; }
