@@ -44,6 +44,21 @@
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
   };
 
+  var brandInitial = function (brand) {
+    var name = String(brand.name || '').trim();
+    return name ? name.charAt(0) : '?';
+  };
+  var brandInk = function (hex) {
+    var h = String(hex || '').replace('#', '');
+    if (h.length === 3) h = h.charAt(0) + h.charAt(0) + h.charAt(1) + h.charAt(1) + h.charAt(2) + h.charAt(2);
+    if (h.length !== 6) return '#fff';
+    var r = parseInt(h.slice(0, 2), 16);
+    var g = parseInt(h.slice(2, 4), 16);
+    var b = parseInt(h.slice(4, 6), 16);
+    if (isNaN(r) || isNaN(g) || isNaN(b)) return '#fff';
+    return (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.62 ? '#0c192c' : '#fff';
+  };
+
   var DATA = null;
   var state = { tab: 'brands', brandCat: 'all', brandQuery: '', year: 'all' };
   var epByRelated = {};
@@ -214,7 +229,8 @@
 
     grid.innerHTML = list.map(function (brand) {
       return '<article class="brand" style="--brand:' + esc(brand.color) + '">' +
-        '<div class="brand__top"><span class="brand__dot" aria-hidden="true"></span>' +
+        '<div class="brand__top"><span class="brand__mark" aria-hidden="true" style="color:' + brandInk(brand.color) + '">' +
+        esc(brandInitial(brand)) + '</span>' +
         '<span class="brand__company">' + esc(brand.company) + '</span></div>' +
         '<h3>' + esc(brand.name) + '</h3>' +
         '<p class="brand__en">' + esc(brand.en) + '</p>' +

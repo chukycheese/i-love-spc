@@ -44,6 +44,8 @@ def main() -> int:
         page.wait_for_timeout(200)
         if page.eval_on_selector_all(".brand", "e => e.length") != 30:
             problems.append("reset did not restore 30 brands")
+        if page.eval_on_selector_all(".brand__mark", "e => e.length") != 30:
+            problems.append("brand monograms missing after reset")
 
         # 탭 + 아코디언
         page.click('[data-tab="incidents"]')
