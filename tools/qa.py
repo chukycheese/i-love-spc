@@ -25,7 +25,14 @@ def main() -> int:
             problems.append("as-of label duplicated or wrong: " + page.inner_text("#as-of-label"))
 
         # 검색
-        cases = {"ㅂㅅㅋ": ["배스킨라빈스"], "ㅅㅇㅋㅅ": ["쉐이크쉑"], "던킨": ["던킨"], "파리": None}
+        cases = {
+            "ㅂㅅㅋ": ["배스킨라빈스"],
+            "ㅅㅇㅋㅅ": ["쉐이크쉑"],
+            "던킨": ["던킨"],
+            "PB": ["파리바게뜨"],
+            "PG": ["피그인더가든"],
+            "파리": None,
+        }
         for query, expected in cases.items():
             page.fill("#brand-search", query)
             page.wait_for_timeout(200)
@@ -46,6 +53,16 @@ def main() -> int:
             problems.append("reset did not restore 30 brands")
         if page.eval_on_selector_all(".brand__mark", "e => e.length") != 30:
             problems.append("brand monograms missing after reset")
+        marks = page.eval_on_selector_all(".brand__mark", "els => els.map(e => e.textContent.trim())")
+        expected_marks = [
+            "PB", "PC", "P5", "BR", "DU", "SA", "SH", "BI", "CD", "SA",
+            "MB", "CS", "SS", "LG", "PG", "EG", "QP", "VE", "ST", "LA",
+            "GS", "CP", "JA", "CW", "TE", "HP", "HO", "SG", "WV", "SP",
+        ]
+        if marks != expected_marks:
+            problems.append(f"brand initials: {marks} != {expected_marks}")
+        if any(len(m) != 2 or not m.isalnum() or m != m.upper() for m in marks):
+            problems.append("brand initials must be 2 uppercase alphanumerics: " + repr(marks))
 
         # 탭 + 아코디언
         page.click('[data-tab="incidents"]')

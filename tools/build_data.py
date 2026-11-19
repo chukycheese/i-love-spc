@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """spc-data.json 보조 스크립트.
 
-1) 브랜드 이름에서 초성 검색 키(choseong)를 만들어 JSON에 채워 넣는다.
+1) 브랜드 이름에서 초성 검색 키(choseong)와 2글자 영문 이니셜(initials)을 만들어 JSON에 채워 넣는다.
 2) file:// 로 index.html을 열어도 데이터가 보이도록 data/spc-data.js 래퍼를 만든다.
    (원본은 언제나 data/spc-data.json 이다.)
 """
@@ -15,6 +15,10 @@ DATA_JS = ROOT / "data" / "spc-data.js"
 
 CHOSEONG = list("ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ")
 
+# 이니셜 생성 시 건너뛰는 기능어. 단어 경계를 살리되 관사·전치사는 제외한다.
+INITIAL_STOPWORDS = {"the", "in", "of", "and"}
+INITIAL_SPLIT = re.compile(r"[\s@&/+.\-]+")
+
 
 def choseong(text: str) -> str:
     out = []
@@ -27,13 +31,40 @@ def choseong(text: str) -> str:
     return "".join(out)
 
 
+def initials(text: str) -> str:
+    """브랜드 영문명에서 두 글자 이니셜을 만든다.
+
+    Paris Baguette -> PB, Passion 5 -> P5, Pig in the Garden -> PG.
+    단어가 하나뿐이면 앞 두 글자를 쓴다 (Vera -> VE).
+    """
+    cleaned = text.replace("'", "").replace("\u2019", "")
+    tokens = [t for t in INITIAL_SPLIT.split(cleaned) if t]
+    words = [t for t in tokens if t.lower() not in INITIAL_STOPWORDS] or tokens
+
+    if not words:
+        return "?"
+    if len(words) > 1:
+        return (words[0][0] + words[1][0]).upper()
+
+    alnum = "".join(ch for ch in words[0] if ch.isalnum())
+    return (alnum[:2] or words[0][0]).upper()
+
+
 def main() -> None:
     data = json.loads(DATA_JSON.read_text(encoding="utf-8"))
 
     for brand in data["brands"]:
         brand["choseong"] = choseong(brand["name"])
+        brand["initials"] = initials(brand["en"])
         brand["search"] = " ".join(
-            [brand["name"], brand["en"], brand["company"], brand["product"], brand["choseong"]]
+            [
+                brand["name"],
+                brand["en"],
+                brand["company"],
+                brand["product"],
+                brand["choseong"],
+                brand["initials"],
+            ]
         ).lower()
 
     for trial in data["trials"]:
@@ -63,7 +94,7 @@ def main() -> None:
     }
     print("OK", counts)
     print("json bytes:", DATA_JSON.stat().st_size, "js bytes:", DATA_JS.stat().st_size)
-    print("brands:", ", ".join(f'{b["name"]}({b["choseong"]})' for b in data["brands"]))
+    print("brands:", ", ".join(f'{b["name"]}({b["choseong"]}/{b["initials"]})' for b in data["brands"]))
 
 
 if __name__ == "__main__":

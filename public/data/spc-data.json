@@ -1224,7 +1224,8 @@
       "color": "#16305E",
       "product": "빵 · 케이크 · 전국 3,400여 매장",
       "choseong": "ㅍㄹㅂㄱㄸ",
-      "search": "파리바게뜨 paris baguette 파리크라상 빵 · 케이크 · 전국 3,400여 매장 ㅍㄹㅂㄱㄸ"
+      "search": "파리바게뜨 paris baguette 파리크라상 빵 · 케이크 · 전국 3,400여 매장 ㅍㄹㅂㄱㄸ pb",
+      "initials": "PB"
     },
     {
       "name": "파리크라상",
@@ -1234,7 +1235,8 @@
       "color": "#7C1F3A",
       "product": "고급 베이커리 · 레스토랑",
       "choseong": "ㅍㄹㅋㄹㅅ",
-      "search": "파리크라상 paris croissant 파리크라상 고급 베이커리 · 레스토랑 ㅍㄹㅋㄹㅅ"
+      "search": "파리크라상 paris croissant 파리크라상 고급 베이커리 · 레스토랑 ㅍㄹㅋㄹㅅ pc",
+      "initials": "PC"
     },
     {
       "name": "패션5",
@@ -1244,7 +1246,8 @@
       "color": "#1B1B1B",
       "product": "프리미엄 베이커리 카페 (한남동)",
       "choseong": "ㅍㅅ5",
-      "search": "패션5 passion 5 파리크라상 프리미엄 베이커리 카페 (한남동) ㅍㅅ5"
+      "search": "패션5 passion 5 파리크라상 프리미엄 베이커리 카페 (한남동) ㅍㅅ5 p5",
+      "initials": "P5"
     },
     {
       "name": "배스킨라빈스",
@@ -1254,7 +1257,8 @@
       "color": "#E5006D",
       "product": "31가지 아이스크림",
       "choseong": "ㅂㅅㅋㄹㅂㅅ",
-      "search": "배스킨라빈스 baskin robbins 비알코리아 31가지 아이스크림 ㅂㅅㅋㄹㅂㅅ"
+      "search": "배스킨라빈스 baskin robbins 비알코리아 31가지 아이스크림 ㅂㅅㅋㄹㅂㅅ br",
+      "initials": "BR"
     },
     {
       "name": "던킨",
@@ -1264,7 +1268,8 @@
       "color": "#F26A21",
       "product": "도넛 · 커피",
       "choseong": "ㄷㅋ",
-      "search": "던킨 dunkin' 비알코리아 도넛 · 커피 ㄷㅋ"
+      "search": "던킨 dunkin' 비알코리아 도넛 · 커피 ㄷㅋ du",
+      "initials": "DU"
     },
     {
       "name": "삼립",
@@ -1274,7 +1279,8 @@
       "color": "#D71920",
       "product": "식빵 · 호빵 · 포켓몬빵",
       "choseong": "ㅅㄹ",
-      "search": "삼립 samlip 삼립 식빵 · 호빵 · 포켓몬빵 ㅅㄹ"
+      "search": "삼립 samlip 삼립 식빵 · 호빵 · 포켓몬빵 ㅅㄹ sa",
+      "initials": "SA"
     },
     {
       "name": "샤니",
@@ -1284,7 +1290,8 @@
       "color": "#E8577F",
       "product": "마트 빵 · 크림빵",
       "choseong": "ㅅㄴ",
-      "search": "샤니 shany 삼립 마트 빵 · 크림빵 ㅅㄴ"
+      "search": "샤니 shany 삼립 마트 빵 · 크림빵 ㅅㄴ sh",
+      "initials": "SH"
     },
     {
       "name": "빚은",
@@ -1294,7 +1301,8 @@
       "color": "#6B4A2B",
       "product": "떡 · 한과",
       "choseong": "ㅂㅇ",
-      "search": "빚은 bizeun 삼립 떡 · 한과 ㅂㅇ"
+      "search": "빚은 bizeun 삼립 떡 · 한과 ㅂㅇ bi",
+      "initials": "BI"
     },
     {
       "name": "시티델리",
@@ -1304,7 +1312,8 @@
       "color": "#2F6E4F",
       "product": "샌드위치 · 샐러드",
       "choseong": "ㅅㅌㄷㄹ",
-      "search": "시티델리 city deli 삼립 샌드위치 · 샐러드 ㅅㅌㄷㄹ"
+      "search": "시티델리 city deli 삼립 샌드위치 · 샐러드 ㅅㅌㄷㄹ cd",
+      "initials": "CD"
     },
     {
       "name": "샌드팜",
@@ -1314,7 +1323,8 @@
       "color": "#D9A641",
       "product": "샌드위치",
       "choseong": "ㅅㄷㅍ",
-      "search": "샌드팜 sandfarm 삼립 샌드위치 ㅅㄷㅍ"
+      "search": "샌드팜 sandfarm 삼립 샌드위치 ㅅㄷㅍ sa",
+      "initials": "SA"
     },
     {
       "name": "미각제빵소",
@@ -1324,7 +1334,8 @@
       "color": "#A8642B",
       "product": "식사빵",
       "choseong": "ㅁㄱㅈㅃㅅ",
-      "search": "미각제빵소 migak bakery 삼립 식사빵 ㅁㄱㅈㅃㅅ"
+      "search": "미각제빵소 migak bakery 삼립 식사빵 ㅁㄱㅈㅃㅅ mb",
+      "initials": "MB"
     },
     {
       "name": "카페스노우",
@@ -1334,7 +1345,8 @@
       "color": "#7FB2D9",
       "product": "빵집형 카페",
       "choseong": "ㅋㅍㅅㄴㅇ",
-      "search": "카페스노우 cafe snow 삼립 빵집형 카페 ㅋㅍㅅㄴㅇ"
+      "search": "카페스노우 cafe snow 삼립 빵집형 카페 ㅋㅍㅅㄴㅇ cs",
+      "initials": "CS"
     },
     {
       "name": "쉐이크쉑",
@@ -1344,7 +1356,8 @@
       "color": "#5CB947",
       "product": "버거 · 셰이크",
       "choseong": "ㅅㅇㅋㅅ",
-      "search": "쉐이크쉑 shake shack 빅바이트컴퍼니 버거 · 셰이크 ㅅㅇㅋㅅ"
+      "search": "쉐이크쉑 shake shack 빅바이트컴퍼니 버거 · 셰이크 ㅅㅇㅋㅅ ss",
+      "initials": "SS"
     },
     {
       "name": "라그릴리아",
@@ -1354,7 +1367,8 @@
       "color": "#7B1E2B",
       "product": "이탈리안 파스타 · 스테이크",
       "choseong": "ㄹㄱㄹㄹㅇ",
-      "search": "라그릴리아 la grillia 파리크라상 이탈리안 파스타 · 스테이크 ㄹㄱㄹㄹㅇ"
+      "search": "라그릴리아 la grillia 파리크라상 이탈리안 파스타 · 스테이크 ㄹㄱㄹㄹㅇ lg",
+      "initials": "LG"
     },
     {
       "name": "피그인더가든",
@@ -1364,7 +1378,8 @@
       "color": "#4C7A34",
       "product": "샐러드 · 샌드위치",
       "choseong": "ㅍㄱㅇㄷㄱㄷ",
-      "search": "피그인더가든 pig in the garden 삼립 샐러드 · 샌드위치 ㅍㄱㅇㄷㄱㄷ"
+      "search": "피그인더가든 pig in the garden 삼립 샐러드 · 샌드위치 ㅍㄱㅇㄷㄱㄷ pg",
+      "initials": "PG"
     },
     {
       "name": "에그슬럿",
@@ -1374,7 +1389,8 @@
       "color": "#F2C300",
       "product": "에그 샌드위치",
       "choseong": "ㅇㄱㅅㄹ",
-      "search": "에그슬럿 eggslut 삼립 에그 샌드위치 ㅇㄱㅅㄹ"
+      "search": "에그슬럿 eggslut 삼립 에그 샌드위치 ㅇㄱㅅㄹ eg",
+      "initials": "EG"
     },
     {
       "name": "퀸즈파크",
@@ -1384,7 +1400,8 @@
       "color": "#1F4E5F",
       "product": "디저트 다이닝",
       "choseong": "ㅋㅈㅍㅋ",
-      "search": "퀸즈파크 queen's park 파리크라상 디저트 다이닝 ㅋㅈㅍㅋ"
+      "search": "퀸즈파크 queen's park 파리크라상 디저트 다이닝 ㅋㅈㅍㅋ qp",
+      "initials": "QP"
     },
     {
       "name": "베라",
@@ -1394,7 +1411,8 @@
       "color": "#C4608C",
       "product": "디저트 카페",
       "choseong": "ㅂㄹ",
-      "search": "베라 vera 파리크라상 디저트 카페 ㅂㄹ"
+      "search": "베라 vera 파리크라상 디저트 카페 ㅂㄹ ve",
+      "initials": "VE"
     },
     {
       "name": "스트리트",
@@ -1404,7 +1422,8 @@
       "color": "#E4572E",
       "product": "스트리트 푸드",
       "choseong": "ㅅㅌㄹㅌ",
-      "search": "스트리트 streat 파리크라상 스트리트 푸드 ㅅㅌㄹㅌ"
+      "search": "스트리트 streat 파리크라상 스트리트 푸드 ㅅㅌㄹㅌ st",
+      "initials": "ST"
     },
     {
       "name": "라뜰리에",
@@ -1414,7 +1433,8 @@
       "color": "#3B3B58",
       "product": "프렌치 다이닝",
       "choseong": "ㄹㄸㄹㅇ",
-      "search": "라뜰리에 l'atelier 파리크라상 프렌치 다이닝 ㄹㄸㄹㅇ"
+      "search": "라뜰리에 l'atelier 파리크라상 프렌치 다이닝 ㄹㄸㄹㅇ la",
+      "initials": "LA"
     },
     {
       "name": "그릭슈바인",
@@ -1424,7 +1444,8 @@
       "color": "#8A5A2B",
       "product": "햄 · 육가공",
       "choseong": "ㄱㄹㅅㅂㅇ",
-      "search": "그릭슈바인 greek schwein 삼립 햄 · 육가공 ㄱㄹㅅㅂㅇ"
+      "search": "그릭슈바인 greek schwein 삼립 햄 · 육가공 ㄱㄹㅅㅂㅇ gs",
+      "initials": "GS"
     },
     {
       "name": "파스쿠찌",
@@ -1434,7 +1455,8 @@
       "color": "#7A3B2E",
       "product": "이탈리안 커피",
       "choseong": "ㅍㅅㅋㅉ",
-      "search": "파스쿠찌 caffe pascucci 파리크라상 이탈리안 커피 ㅍㅅㅋㅉ"
+      "search": "파스쿠찌 caffe pascucci 파리크라상 이탈리안 커피 ㅍㅅㅋㅉ cp",
+      "initials": "CP"
     },
     {
       "name": "잠바주스",
@@ -1444,7 +1466,8 @@
       "color": "#F26522",
       "product": "스무디 · 주스",
       "choseong": "ㅈㅂㅈㅅ",
-      "search": "잠바주스 jamba 빅바이트컴퍼니 스무디 · 주스 ㅈㅂㅈㅅ"
+      "search": "잠바주스 jamba 빅바이트컴퍼니 스무디 · 주스 ㅈㅂㅈㅅ ja",
+      "initials": "JA"
     },
     {
       "name": "커피앳웍스",
@@ -1454,7 +1477,8 @@
       "color": "#3C3C3C",
       "product": "스페셜티 커피",
       "choseong": "ㅋㅍㅇㅇㅅ",
-      "search": "커피앳웍스 coffee@works 파리크라상 스페셜티 커피 ㅋㅍㅇㅇㅅ"
+      "search": "커피앳웍스 coffee@works 파리크라상 스페셜티 커피 ㅋㅍㅇㅇㅅ cw",
+      "initials": "CW"
     },
     {
       "name": "티트라",
@@ -1464,7 +1488,8 @@
       "color": "#2E8B57",
       "product": "티 전문",
       "choseong": "ㅌㅌㄹ",
-      "search": "티트라 teatra 파리크라상 티 전문 ㅌㅌㄹ"
+      "search": "티트라 teatra 파리크라상 티 전문 ㅌㅌㄹ te",
+      "initials": "TE"
     },
     {
       "name": "해피포인트",
@@ -1474,7 +1499,8 @@
       "color": "#FF2D78",
       "product": "통합 멤버십 앱",
       "choseong": "ㅎㅍㅍㅇㅌ",
-      "search": "해피포인트 happy point 섹타나인 통합 멤버십 앱 ㅎㅍㅍㅇㅌ"
+      "search": "해피포인트 happy point 섹타나인 통합 멤버십 앱 ㅎㅍㅍㅇㅌ hp",
+      "initials": "HP"
     },
     {
       "name": "해피오더",
@@ -1484,7 +1510,8 @@
       "color": "#FF6FA5",
       "product": "모바일 주문",
       "choseong": "ㅎㅍㅇㄷ",
-      "search": "해피오더 happy order 섹타나인 모바일 주문 ㅎㅍㅇㄷ"
+      "search": "해피오더 happy order 섹타나인 모바일 주문 ㅎㅍㅇㄷ ho",
+      "initials": "HO"
     },
     {
       "name": "SPC GFS",
@@ -1494,7 +1521,8 @@
       "color": "#0F6E5C",
       "product": "식자재 유통",
       "choseong": "spcgfs",
-      "search": "spc gfs spc gfs spc gfs 식자재 유통 spcgfs"
+      "search": "spc gfs spc gfs spc gfs 식자재 유통 spcgfs sg",
+      "initials": "SG"
     },
     {
       "name": "더월드바인",
@@ -1504,7 +1532,8 @@
       "color": "#5B2A46",
       "product": "와인 수입 · 유통",
       "choseong": "ㄷㅇㄷㅂㅇ",
-      "search": "더월드바인 the world vine 타이거인터내셔날 와인 수입 · 유통 ㄷㅇㄷㅂㅇ"
+      "search": "더월드바인 the world vine 타이거인터내셔날 와인 수입 · 유통 ㄷㅇㄷㅂㅇ wv",
+      "initials": "WV"
     },
     {
       "name": "스프링클스",
@@ -1514,13 +1543,14 @@
       "color": "#E88BB0",
       "product": "컵케이크",
       "choseong": "ㅅㅍㄹㅋㅅ",
-      "search": "스프링클스 sprinkles 빅바이트컴퍼니 컵케이크 ㅅㅍㄹㅋㅅ"
+      "search": "스프링클스 sprinkles 빅바이트컴퍼니 컵케이크 ㅅㅍㄹㅋㅅ sp",
+      "initials": "SP"
     }
   ],
   "brandNotes": [
     "던킨과 배스킨라빈스는 미국 브랜드를 비알코리아가 국내에서 운영하는 라이선스 사업입니다. 브랜드를 '소유'한 것은 아닙니다.",
     "쉐이크쉑도 미국 본사와의 라이선스 계약으로 빅바이트컴퍼니가 국내 운영을 맡고 있습니다.",
     "브랜드 수와 계열사 수는 공개 자료 기준으로 정리한 것이며, 해외 법인과 소규모 브랜드는 일부 빠져 있습니다.",
-    "카드의 색상 이니셜은 공식 로고가 아니라 브랜드를 구분하기 위한 자체 표식입니다."
+    "카드의 색상 이니셜(영문 2자)은 공식 로고가 아니라 브랜드를 구분하기 위한 자체 표식입니다."
   ]
 }

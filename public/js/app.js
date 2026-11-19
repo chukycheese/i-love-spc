@@ -44,9 +44,24 @@
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
   };
 
+  var INITIAL_STOPWORDS = { the: 1, in: 1, of: 1, and: 1 };
+  var initialsOf = function (text) {
+    var cleaned = String(text || '').replace(/['\u2019]/g, '');
+    var tokens = cleaned.split(/[\s@&/+.\-]+/).filter(Boolean);
+    var words = tokens.filter(function (token) {
+      return !INITIAL_STOPWORDS[token.toLowerCase()];
+    });
+    if (!words.length) words = tokens;
+    if (!words.length) return '';
+    if (words.length > 1) return (words[0].charAt(0) + words[1].charAt(0)).toUpperCase();
+    var alnum = words[0].replace(/[^a-z0-9]/gi, '');
+    return (alnum.slice(0, 2) || words[0].charAt(0)).toUpperCase();
+  };
   var brandInitial = function (brand) {
-    var name = String(brand.name || '').trim();
-    return name ? name.charAt(0) : '?';
+    var stored = String(brand.initials || '').trim();
+    if (stored) return stored;
+    var derived = initialsOf(brand.en) || initialsOf(brand.name);
+    return derived || '?';
   };
   var brandInk = function (hex) {
     var h = String(hex || '').replace('#', '');
@@ -203,7 +218,7 @@
     var companyChoseong = choseongOf(brand.company);
     var haystack = norm([
       brand.name, brand.en, brand.company, brand.product,
-      brand.choseong, companyChoseong, CATEGORY[brand.category]
+      brand.choseong, brand.initials, companyChoseong, CATEGORY[brand.category]
     ].join('|')).replace(/\|/g, '');
 
     if (haystack.indexOf(q) > -1) return true;
